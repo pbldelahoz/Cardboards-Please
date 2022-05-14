@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-
     #region Data
 
     [SerializeField] private Canvas _canvas;
@@ -40,10 +39,18 @@ public class MainMenuController : MonoBehaviour
         {
             playButton.SetActive(true);
             creditsButton.SetActive(true);
-            MeshRenderer mrPB = playButton.GetComponentInChildren<MeshRenderer>();
-            MeshRenderer mrC = creditsButton.GetComponentInChildren<MeshRenderer>();
-            mrPB.enabled = true;
-            mrC.enabled = true;
+            MeshRenderer[] mrPB = playButton.GetComponentsInChildren<MeshRenderer>();
+            MeshRenderer[] mrC = creditsButton.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer rend in mrC)
+            {
+                rend.enabled = true;
+            }
+
+            foreach (MeshRenderer rend in mrPB)
+            {
+                rend.enabled = true;
+            }
+
 
             inGame = false;
         }
@@ -56,10 +63,17 @@ public class MainMenuController : MonoBehaviour
     public void playButtonAction()
     {
         creditsImage.enabled = false;
-        MeshRenderer mrPB = playButton.GetComponentInChildren<MeshRenderer>();
-        MeshRenderer mrC = creditsButton.GetComponentInChildren<MeshRenderer>();
-        mrPB.enabled = false;
-        mrC.enabled = false;
+        MeshRenderer[] mrPB = playButton.GetComponentsInChildren<MeshRenderer>();
+        MeshRenderer[] mrC = creditsButton.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer rend in mrC)
+        {
+            rend.enabled = false;
+        }
+
+        foreach (MeshRenderer rend in mrPB)
+        {
+            rend.enabled = false;
+        }
 
         playButton.SetActive(false);
         creditsButton.SetActive(false);
