@@ -17,6 +17,7 @@
           <e p="GameController.cs" t="Include" />
           <e p="ItemFeatures.cs" t="Include" />
           <e p="ItemGeneration.cs" t="Include" />
+          <e p="MainMenuController.cs" t="Include" />
           <e p="MyHandController.cs" t="Include" />
           <e p="VRScan.cs" t="Include" />
         </e>
