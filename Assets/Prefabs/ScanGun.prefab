@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63caaa7b8a7e2d247a156039aa3a03d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spotLight: {fileID: 0}
 --- !u!54 &2743960518353135354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,7 +237,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2743960519373927174}
+      - m_Target: {fileID: 1232535114}
         m_TargetAssemblyTypeName: SimpleShoot, Assembly-CSharp
         m_MethodName: PullTheTriger
         m_Mode: 1
@@ -253,7 +252,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2743960519373927174}
+      - m_Target: {fileID: 1232535114}
         m_TargetAssemblyTypeName: SimpleShoot, Assembly-CSharp
         m_MethodName: ReleaseTheTriger
         m_Mode: 1
@@ -339,6 +338,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2486253064358454391}
   - component: {fileID: 3594749297402117915}
+  - component: {fileID: 1232535115}
+  - component: {fileID: 1232535114}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -354,8 +355,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614190312777962221}
   m_LocalRotation: {x: -0.000000014901163, y: -0.57847464, z: -0.000000011175872, w: 0.8157004}
-  m_LocalPosition: {x: -0.188, y: -0, z: 1.032}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.52, y: 0, z: 0.49}
+  m_LocalScale: {x: 1.8061109, y: 10.67, z: 10.67}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2422436255308942974}
@@ -423,6 +424,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!65 &1232535115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614190312777962221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.22, z: 0.59}
+  m_Center: {x: -0.04, y: 0.01, z: 0.39}
+--- !u!114 &1232535114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614190312777962221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63caaa7b8a7e2d247a156039aa3a03d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2743960519693756821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,21 +523,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4ac618ccf25e94b4d83769a670682eb9, type: 3}
   m_PrefabInstance: {fileID: 2743960519693756821}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3086628601769481412 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ac618ccf25e94b4d83769a670682eb9, type: 3}
-  m_PrefabInstance: {fileID: 2743960519693756821}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2743960519373927174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086628601769481412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63caaa7b8a7e2d247a156039aa3a03d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spotLight: {fileID: 3614190312777962221}

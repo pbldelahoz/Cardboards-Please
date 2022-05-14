@@ -6,7 +6,11 @@ public class ConveyorSimple : MonoBehaviour
 {
     public float speed;
     Rigidbody rBody;
+    public bool xDirection = false;
+    public bool yDirection= false;
+    public bool zDirection=false;
     // Start is called before the first frame update
+
     void Start()
     {
         rBody = GetComponent<Rigidbody>();
@@ -16,7 +20,21 @@ public class ConveyorSimple : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 pos = rBody.position;
-        rBody.position += Vector3.back * speed * Time.fixedDeltaTime;
+        float speedPos = speed * Time.fixedDeltaTime;
+        Vector3 speedVec = Vector3.zero;
+        if (xDirection)
+        {
+            speedVec.x = -speedPos;
+        }
+        if (yDirection)
+        {
+            speedVec.y = -speedPos;
+        }  
+        if (zDirection)
+        {
+            speedVec.z = -speedPos;
+        }
+        rBody.position += speedVec;
         rBody.MovePosition(pos);
     }
 }

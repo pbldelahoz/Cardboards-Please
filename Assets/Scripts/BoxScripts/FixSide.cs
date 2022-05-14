@@ -21,7 +21,7 @@ public class FixSide : MonoBehaviour
         if(other.gameObject.Equals(boxSide) && boxSide.GetComponent<Grabbed>().IsGrabbed)
         {
             HingeJoint joint = boxSide.GetComponent<HingeJoint>();
-            FixedJoint newJoint = new FixedJoint();
+            FixedJoint newJoint = boxSide.AddComponent<FixedJoint>() as FixedJoint;
             newJoint.connectedBody = joint.connectedBody;            
             newJoint.anchor = joint.anchor;
             
@@ -31,8 +31,6 @@ public class FixSide : MonoBehaviour
             joint.limits = limits;
             
             Destroy(joint);
-            FixedJoint component = boxSide.AddComponent<FixedJoint>() as FixedJoint;
-            component = newJoint;
 
             boxSide.GetComponent<XRGrabInteractable>().throwOnDetach = true;
 
