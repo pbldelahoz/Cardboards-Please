@@ -3,7 +3,92 @@ guid: 0eff4ccfb2111184b84b74c63f62e242
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 95446dace5642bb488d40bf9878add64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ProBuilderDefault
+    second: {fileID: 2100000, guid: f20c4e0344afcbe4b8d3a0fadfd90b73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cardboard box 1
+    second: {fileID: 2100000, guid: f32a3c7be59478d44a5b7034f2fbec47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceiling
+    second: {fileID: 2100000, guid: a41aa7a134d11a74486a1b92d80c06d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: conveyor door.001
+    second: {fileID: 2100000, guid: e1a4e46b9965a5b49ac0eba77b7beb12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: conveyor protectors
+    second: {fileID: 2100000, guid: dff2c8339d4dd804bba36c80130a18c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_glass
+    second: {fileID: 2100000, guid: e1e31d8130f57b84b9210dd2ae7acea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_metal
+    second: {fileID: 2100000, guid: 130839ad161de7945b2beb87fa160bca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_metal.001
+    second: {fileID: 2100000, guid: a0b65d7359efe4646a0cb0a47568627c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_metal.003
+    second: {fileID: 2100000, guid: 51c8c31e48268c04e85adba9e1b55dac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red floor
+    second: {fileID: 2100000, guid: 34aa10ca3377dd84baba46df05a46235, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rubber conveyor belt
+    second: {fileID: 2100000, guid: 8e546d301b7f48e48868699e12eb7987, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelve_metal.001
+    second: {fileID: 2100000, guid: 8f1fd316cf745234c93659743fee916e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelve_metal.004
+    second: {fileID: 2100000, guid: c0d8457799351ee42995dc9bd1bacfb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table wood
+    second: {fileID: 2100000, guid: 81ff151728fa1694bb62616da864b462, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: truck doors
+    second: {fileID: 2100000, guid: f5fab631674ce304b991cbb5951530b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouseWall1
+    second: {fileID: 2100000, guid: 6b4e58d15897d354cb507f30a7b536af, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
