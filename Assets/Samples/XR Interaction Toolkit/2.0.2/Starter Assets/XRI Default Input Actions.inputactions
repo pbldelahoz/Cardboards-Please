@@ -278,15 +278,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "HandGrip",
-                    "type": "Value",
-                    "id": "6b36b0af-dd5d-405e-869b-bb0457b9ca33",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -465,17 +456,6 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "426999ab-7817-4b5e-b01f-26d3051509e8",
-                    "path": "<XRSimulatedController>{LeftHand}/grip",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HandGrip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -816,15 +796,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "HandGrip",
-                    "type": "Value",
-                    "id": "d133c54e-9285-4914-94f9-30b73b4a3961",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1003,17 +974,6 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "18e0a33c-358b-44e3-a582-2102a5607cb6",
-                    "path": "<XRSimulatedController>{RightHand}/grip",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HandGrip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
