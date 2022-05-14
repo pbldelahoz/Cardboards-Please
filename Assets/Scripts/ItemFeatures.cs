@@ -24,7 +24,7 @@ public class ItemFeatures : MonoBehaviour
         fastDelivery = randomBool();
 
         //Tamaño por determinar
-        transform.localScale = new Vector3(size+1, size+1, size+1);
+      //  transform.localScale = new Vector3(size+1, size+1, size+1);
     }
 
     bool randomBool()
