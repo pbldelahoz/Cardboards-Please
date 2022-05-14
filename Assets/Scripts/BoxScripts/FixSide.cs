@@ -5,20 +5,40 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FixSide : MonoBehaviour
 {
-    public GameObject boxSide;  
+    public GameObject boxSide;
+
+    private const float VERTICAL_ANGLE = -95;
+
+    private BoxController boxController;
+
+    void Awake()
+    {
+        boxController = this.gameObject.GetComponentInParent<BoxController>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.Equals(boxSide) && boxSide.GetComponent<Grabbed>().IsGrabbed)
         {
-            boxSide.GetComponent<Rigidbody>().isKinematic = true;
             HingeJoint joint = boxSide.GetComponent<HingeJoint>();
-            joint.axis = Vector3.zero;
+            FixedJoint newJoint = new FixedJoint();
+            newJoint.connectedBody = joint.connectedBody;            
+            newJoint.anchor = joint.anchor;
+            
             JointLimits limits = new JointLimits();
-            limits.max = -90;
-            limits.min = -90;
-            joint.limits = limits;            
+            limits.max = VERTICAL_ANGLE;
+            limits.min = VERTICAL_ANGLE;
+            joint.limits = limits;
+            
+            Destroy(joint);
+            FixedJoint component = boxSide.AddComponent<FixedJoint>() as FixedJoint;
+            component = newJoint;
+
             boxSide.GetComponent<XRGrabInteractable>().throwOnDetach = true;
+
+            boxSide = null;
+
+            boxController.SidesClosed++;
         }
     }
 }
