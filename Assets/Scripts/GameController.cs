@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour
 
     public void blackFade()
     {
-        playerXR.transform.position = firstPosition;
+        //playerXR.transform.position = firstPosition;
     }
 
 
@@ -143,10 +143,6 @@ public class GameController : MonoBehaviour
             ts.Milliseconds / 10));
     }
 
-    public int getPoints()
-    {
-        return points;
-    }
 
     private void hideButton(GameObject button)
     {
@@ -167,6 +163,11 @@ public class GameController : MonoBehaviour
         {
             rend.enabled = true;
         }
+    }
+
+    public int getPoints()
+    {
+        return points;
     }
 
     public void addPoint()

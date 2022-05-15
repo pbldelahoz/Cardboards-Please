@@ -7,7 +7,7 @@ public class PointController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameController _gameController;
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("UN OBJETO HA sido contabilizado");
 
