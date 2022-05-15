@@ -14,6 +14,9 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject quitButton;
     private bool inGame = false;
 
+
+    [SerializeField] private List<GameObject> disableObjects = new List<GameObject>();
+    [SerializeField] private GameObject destroyableObjects;
     #endregion
 
     // Start is called before the first frame update
@@ -49,6 +52,18 @@ public class MainMenuController : MonoBehaviour
             foreach (MeshRenderer rend in mrPB)
             {
                 rend.enabled = true;
+            }
+            foreach (GameObject obj in disableObjects)
+            {
+                obj.gameObject.SetActive(false);
+            }
+            //for(int i = 0; i < destroyableObjects.transform.childCount; i++)
+            //{
+            //    Destroy
+            //}
+            foreach(Transform child in destroyableObjects.transform)
+            {
+                Destroy(child);
             }
 
 

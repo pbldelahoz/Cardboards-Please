@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 638322054796978447}
   - component: {fileID: 1993300856086398812}
   - component: {fileID: 5820578703903724162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_01152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4514976331067601769}
   - component: {fileID: 4514976331067601774}
   - component: {fileID: 4514976331067601775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_0114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117084388924707704}
   - component: {fileID: 4514976331067601772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bleach
   m_TagString: Untagged
   m_Icon: {fileID: 0}

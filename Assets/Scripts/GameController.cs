@@ -17,13 +17,13 @@ public class GameController : MonoBehaviour
     float currentTime = 0f;
     [SerializeField] float startingTime = 10f;
     [SerializeField] float instanceTime = 20f;
-    [SerializeField] float timeBetweenInstance = 0f;
+    [SerializeField] float timeBetweenInstance = 5f;
+
+    [SerializeField] GameObject spawnerFolder;
 
     bool activate = false;
 
-    public float transitionTime = 1f;
 
-    public Animator transition;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,8 @@ public class GameController : MonoBehaviour
             Debug.Log("Spawned Item");
             timeBetweenInstance = instanceTime;
             int randomId = Random.Range(0, itemsList.Count);
-            Instantiate(itemsList[randomId], gameObject.transform.position, gameObject.transform.rotation);
+            GameObject obj = Instantiate(itemsList[randomId], gameObject.transform.position, gameObject.transform.rotation);
+            obj.transform.SetParent(spawnerFolder.transform);
         }
 
     }
@@ -75,15 +76,5 @@ public class GameController : MonoBehaviour
     public void blackFade()
     {
         playerXR.transform.position = firstPosition;
-        StartCoroutine(LoadLevel());
-
-    }
-
-    IEnumerator LoadLevel()
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionTime);
-
-        
     }
 }

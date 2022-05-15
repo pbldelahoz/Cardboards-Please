@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8071262972491941306}
   - component: {fileID: 6882714833435906327}
   - component: {fileID: 2788007951840733068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2275151834281222116}
   - component: {fileID: 3549496327069797001}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: fardo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 2356452833392075170}
   - component: {fileID: 3843899895965139855}
   - component: {fileID: 8331704583967103518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

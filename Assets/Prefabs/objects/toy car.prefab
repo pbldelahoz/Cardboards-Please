@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807477206723517312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toy car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7156595339897186780}
   - component: {fileID: 2702207265487462146}
   - component: {fileID: 935528842318209984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 2023327529092829690}
   - component: {fileID: 3268762424763346219}
   - component: {fileID: 4465508794865710241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8414396018080120476}
   - component: {fileID: 45128649441043921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toy car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 4443864389452645449}
   - component: {fileID: 1684570957783639616}
   - component: {fileID: 1916113986228123403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 5107836937027334854}
   - component: {fileID: 7995853449940142557}
   - component: {fileID: 5371956271483037382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 1439513281635147331}
   - component: {fileID: 7849251474171028327}
   - component: {fileID: 5862539011040734032}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
