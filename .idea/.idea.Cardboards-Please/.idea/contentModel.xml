@@ -7,19 +7,26 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="BoxScripts" t="Include">
+            <e p="BoxController.cs" t="Include" />
+            <e p="Container.cs" t="Include" />
+            <e p="FixSide.cs" t="Include" />
+            <e p="Grabbed.cs" t="Include" />
+          </e>
           <e p="Button" t="Include">
             <e p="PhysicsButton.cs" t="Include" />
           </e>
           <e p="Conveyor" t="Include">
             <e p="ConveyorSimple.cs" t="Include" />
           </e>
-          <e p="CountdownTimer.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="ItemFeatures.cs" t="Include" />
-          <e p="ItemGeneration.cs" t="Include" />
           <e p="MainMenuController.cs" t="Include" />
           <e p="MyHandController.cs" t="Include" />
-          <e p="VRScan.cs" t="Include" />
+          <e p="ObjectProperties" t="Include">
+            <e p="ObjectData.cs" t="Include" />
+          </e>
+          <e p="SimpleShoot.cs" t="Include" />
         </e>
         <e p="Textures" t="Include">
           <e p="_schbehmp_2K_surface_ms" t="Include">
