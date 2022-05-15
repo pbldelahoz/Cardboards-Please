@@ -6,6 +6,7 @@
     <e p="D:\documentos\github\Cardboards-Please" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Destroyer.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BoxScripts" t="Include">
             <e p="BoxController.cs" t="Include" />
@@ -14,6 +15,7 @@
             <e p="Grabbed.cs" t="Include" />
           </e>
           <e p="Button" t="Include">
+            <e p="ButtonVR.cs" t="Include" />
             <e p="PhysicsButton.cs" t="Include" />
           </e>
           <e p="Conveyor" t="Include">
