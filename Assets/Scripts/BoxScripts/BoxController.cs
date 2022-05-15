@@ -6,6 +6,8 @@ public class BoxController : MonoBehaviour
 {
     private int sidesClosed;
     private bool objectInside;
+    [SerializeField] private GameObject[] children;
+    [SerializeField] private GameObject closedBox;
 
     public int SidesClosed
     {
@@ -19,7 +21,8 @@ public class BoxController : MonoBehaviour
         set { objectInside = value; }
     }
 
-    void Awake() {
+    void Awake()
+    {
         sidesClosed = 0;
         objectInside = false;
     }
@@ -29,7 +32,12 @@ public class BoxController : MonoBehaviour
         if (objectInside && sidesClosed == 4)
         {
             // CAMBIAR MODELO CAJA
-            Debug.Log("yay! :D");
+            foreach (var obj in children)
+            {
+                Destroy(obj);
+            }
+
+            Instantiate(closedBox);
         }
     }
 }
