@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawned: 0
   children: []
-  closedBox: {fileID: 0}
+  closedBox: {fileID: 300352477716697526, guid: 7605a18f775397e41974c3a4a6ea2283, type: 3}
 --- !u!1 &6022016446235986559
 GameObject:
   m_ObjectHideFlags: 0

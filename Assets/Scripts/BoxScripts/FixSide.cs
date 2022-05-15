@@ -37,7 +37,6 @@ public class FixSide : MonoBehaviour
             boxSide = null;
 
             boxController.SidesClosed++;
-            Debug.Log(boxController.SidesClosed);
         }
     }
 }

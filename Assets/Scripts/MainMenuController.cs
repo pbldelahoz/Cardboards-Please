@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,17 +13,31 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject creditsButton;
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject quitButton;
+    [SerializeField] private GameObject spawnBoxButton;
+    [SerializeField] private GameController _gameController;
+
+
+    [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private TextMeshProUGUI countText;
+
+
     private bool inGame = false;
 
 
     [SerializeField] private List<GameObject> disableObjects = new List<GameObject>();
     [SerializeField] private GameObject destroyableObjects;
+
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
+        hideText(countText);
+        hideText(timeText);
         creditsImage.enabled = false;
+        disableDisableObjects();
+        hideButton(spawnBoxButton);
     }
 
     // Update is called once per frame
@@ -34,38 +49,27 @@ public class MainMenuController : MonoBehaviour
     public void buttonShowCreditsAction()
     {
         creditsImage.enabled = true;
+        hideText(titleText);
+        hideText(timeText);
+        hideText(countText);
     }
 
     public void buttonQuitAction()
     {
         if (inGame)
         {
-            playButton.SetActive(true);
-            creditsButton.SetActive(true);
-            MeshRenderer[] mrPB = playButton.GetComponentsInChildren<MeshRenderer>();
-            MeshRenderer[] mrC = creditsButton.GetComponentsInChildren<MeshRenderer>();
-            foreach (MeshRenderer rend in mrC)
-            {
-                rend.enabled = true;
-            }
+            _gameController.goToMenu();
 
-            foreach (MeshRenderer rend in mrPB)
-            {
-                rend.enabled = true;
-            }
-            foreach (GameObject obj in disableObjects)
-            {
-                obj.gameObject.SetActive(false);
-            }
-            //for(int i = 0; i < destroyableObjects.transform.childCount; i++)
-            //{
-            //    Destroy
-            //}
-            foreach(Transform child in destroyableObjects.transform)
-            {
-                Destroy(child);
-            }
+            unHideButton(playButton);
+            unHideButton(creditsButton);
 
+            creditsImage.enabled = false;
+            hideText(countText);
+            hideText(timeText);
+            showText(titleText);
+
+            disableDisableObjects();
+            destroyObjects();
 
             inGame = false;
         }
@@ -78,23 +82,82 @@ public class MainMenuController : MonoBehaviour
     public void playButtonAction()
     {
         creditsImage.enabled = false;
-        MeshRenderer[] mrPB = playButton.GetComponentsInChildren<MeshRenderer>();
-        MeshRenderer[] mrC = creditsButton.GetComponentsInChildren<MeshRenderer>();
+
+        hideButton(playButton);
+        hideButton(creditsButton);
+
+        enableDisableObjects();
+
+        inGame = true;
+        showText(timeText);
+        showText(countText);
+        hideText(titleText);
+        _gameController.blackFade();
+    }
+
+    private void hideButton(GameObject button)
+    {
+        MeshRenderer[] bu = button.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer rend in bu)
+        {
+            rend.enabled = false;
+        }
+
+        button.SetActive(false);
+    }
+
+    private void unHideButton(GameObject button)
+    {
+        button.SetActive(true);
+        MeshRenderer[] mrC = button.GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer rend in mrC)
         {
-            rend.enabled = false;
+            rend.enabled = true;
         }
+    }
 
-        foreach (MeshRenderer rend in mrPB)
+    private void destroyObjects()
+    {
+        for (int i = 0; i < destroyableObjects.transform.childCount; i++)
         {
-            rend.enabled = false;
+            Destroy(destroyableObjects.transform.GetChild(i).gameObject);
         }
+    }
 
-        playButton.SetActive(false);
-        creditsButton.SetActive(false);
-        inGame = true;
-        //screen shows loading
-        //buttons dissapear except for quit
-        //game starts
+    private void enableDisableObjects()
+    {
+        foreach (GameObject obj in disableObjects)
+        {
+            obj.gameObject.SetActive(true);
+            MeshRenderer[] disable = obj.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer rend in disable)
+            {
+                rend.enabled = true;
+            }
+        }
+    }
+
+    private void disableDisableObjects()
+    {
+        foreach (GameObject obj in disableObjects)
+        {
+            MeshRenderer[] disable = obj.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer rend in disable)
+            {
+                rend.enabled = false;
+            }
+
+            obj.gameObject.SetActive(false);
+        }
+    }
+
+    private void showText(TextMeshProUGUI text)
+    {
+        text.enabled = true;
+    }
+
+    private void hideText(TextMeshProUGUI text)
+    {
+        text.enabled = false;
     }
 }
