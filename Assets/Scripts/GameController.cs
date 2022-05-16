@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
 
     //[SerializeField] float startingTime = 10f;
     [SerializeField] float timeBetweenInstance = 5f;
-    [SerializeField] float levelDuration = 120f;
+    [SerializeField] int levelDuration = 2;
     [SerializeField] GameObject spawnerFolder;
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject spawnButton;
@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
             Debug.Log("Current Time: " + _stopwatch.Elapsed);
             Debug.Log("Current instance Time: " + _instanceStopWatch.Elapsed);
 
-            if (_stopwatch.Elapsed.Seconds > levelDuration)
+            if (_stopwatch.Elapsed.TotalSeconds > levelDuration)
             {
                 Debug.Log("Level Ended");
                 activate = false;
