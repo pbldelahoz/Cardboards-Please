@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &792406784093857339
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4807477206723517312}
-  m_Layer: 6
-  m_Name: toy car
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4807477206723517312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792406784093857339}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5470776999046319767}
-  m_Father: {fileID: 8414396018080120476}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1695816149941220601
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,9 +14,10 @@ GameObject:
   - component: {fileID: 7156595339897186780}
   - component: {fileID: 2702207265487462146}
   - component: {fileID: 935528842318209984}
+  - component: {fileID: 1645894955025893505}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: noBarras
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +38,7 @@ Transform:
   - {fileID: 7954769740251788702}
   - {fileID: 1644514339175172688}
   - {fileID: 6227170198128241724}
-  m_Father: {fileID: 4807477206723517312}
+  m_Father: {fileID: 8414396018080120476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3146943827693806348
@@ -267,6 +236,23 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1645894955025893505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695816149941220601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082b0b048b5d9c54293379dc006982b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  description: 
+  wheight: 0
+  boxSize: 
+  isEspecial: 0
 --- !u!1 &2055806515437638774
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,10 +360,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8414396018080120476}
-  - component: {fileID: 45128649441043921}
   m_Layer: 6
   m_Name: toy car
-  m_TagString: Untagged
+  m_TagString: noBarras
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,31 +375,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2440254174594347354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.715, y: 1.29, z: -49.853}
-  m_LocalScale: {x: 0.044908036, y: 0.044908036, z: 0.044908036}
+  m_LocalPosition: {x: 35.715, y: 1.268, z: -49.854}
+  m_LocalScale: {x: 0.07485678, y: 0.07485678, z: 0.07485678}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4807477206723517312}
+  - {fileID: 5470776999046319767}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &45128649441043921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440254174594347354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 082b0b048b5d9c54293379dc006982b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  description: 
-  wheight: 0
-  boxSize: 
-  isEspecial: 0
 --- !u!1 &3204835278921247934
 GameObject:
   m_ObjectHideFlags: 0

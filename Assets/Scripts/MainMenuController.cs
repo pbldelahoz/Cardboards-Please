@@ -93,6 +93,7 @@ public class MainMenuController : MonoBehaviour
         showText(countText);
         hideText(titleText);
         _gameController.blackFade();
+        _gameController.turnOnLights();
     }
 
     private void hideButton(GameObject button)

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Security.Cryptography;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR;
@@ -17,6 +18,11 @@ public class GameController : MonoBehaviour
     Vector3 position;
     private Stopwatch _stopwatch;
     private Stopwatch _instanceStopWatch;
+    private Stopwatch _lightsStopWatch;
+    public int lightIncrementTime = 50;
+
+    public float intensityIncrement = 0.1f;
+    private float intensityVal = 1;
 
     private int points;
     //Countdown
@@ -31,6 +37,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject spawnButton;
     [SerializeField] private GameObject spawnBoxButton;
     [SerializeField] private GameObject boxPosition;
+    [SerializeField] private Light[] _lights;
+
+    [SerializeField] private AudioSource _audioSourceCorrect;
+    [SerializeField] private AudioSource _audioSourceSpawn;
+
+    [SerializeField] private AudioClip[] clips;
+
+    private float[] intensityValues;
 
 
     bool activate = false;
@@ -39,15 +53,32 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        intensityValues = new float[_lights.Length];
+        for (int i = 0; i < _lights.Length; i++)
+        {
+            intensityValues[i] = _lights[i].intensity;
+        }
+
         points = 0;
         _stopwatch = new Stopwatch();
         _instanceStopWatch = new Stopwatch();
+        _lightsStopWatch = new Stopwatch();
         firstPosition = playerXR.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_lightsStopWatch);
+        if (intensityVal < 1)
+        {
+            if (_lightsStopWatch.ElapsedMilliseconds > lightIncrementTime)
+            {
+                _lightsStopWatch.Restart();
+                turnOnLights();
+            }
+        }
+
         if (activate)
         {
             //currentTime -= 1 * Time.deltaTime;
@@ -60,7 +91,6 @@ public class GameController : MonoBehaviour
                 activate = false;
                 // currentLevel++;
                 gameFinish();
-                // blackFade();
             }
             else
             {
@@ -75,6 +105,7 @@ public class GameController : MonoBehaviour
 
     public void spawnItem()
     {
+        _audioSourceSpawn.Play();
         Debug.Log("Spawned Item");
         int randomId = Random.Range(0, itemsList.Count);
         GameObject obj = Instantiate(itemsList[randomId], gameObject.transform.position,
@@ -106,7 +137,6 @@ public class GameController : MonoBehaviour
     {
         _stopwatch.Stop();
         _instanceStopWatch.Stop();
-
         activate = false;
         unHideButton(playButton);
         hideButton(spawnButton);
@@ -124,14 +154,30 @@ public class GameController : MonoBehaviour
         hideButton(playButton);
         hideButton(spawnButton);
         hideButton(spawnBoxButton);
+        blackFade();
     }
 
     #endregion
 
 
+    public void turnOnLights()
+    {
+        intensityVal += intensityIncrement;
+        for (int i = 0; i < _lights.Length; i++)
+        {
+            _lights[i].intensity = intensityVal * intensityValues[i];
+        }
+    }
+
     public void blackFade()
     {
-        //playerXR.transform.position = firstPosition;
+        intensityVal = 0;
+        for (int i = 0; i < _lights.Length; i++)
+        {
+            _lights[i].intensity = intensityVal * intensityValues[i];
+        }
+
+        _lightsStopWatch.Restart();
     }
 
 
@@ -172,6 +218,15 @@ public class GameController : MonoBehaviour
 
     public void addPoint()
     {
+        _audioSourceCorrect.clip = clips[0];
+        _audioSourceCorrect.Play();
         points++;
+    }
+
+    public void takePoint()
+    {
+        _audioSourceCorrect.clip = clips[1];
+        _audioSourceCorrect.Play();
+        points--;
     }
 }

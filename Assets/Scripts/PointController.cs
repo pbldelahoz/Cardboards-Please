@@ -15,5 +15,9 @@ public class PointController : MonoBehaviour
         {
             _gameController.addPoint();
         }
+        else 
+        {
+            _gameController.takePoint();
+        }
     }
 }

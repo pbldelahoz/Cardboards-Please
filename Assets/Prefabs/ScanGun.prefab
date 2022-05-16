@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63caaa7b8a7e2d247a156039aa3a03d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameController: {fileID: 0}
 --- !u!54 &2743960518353135354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -408,7 +409,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -432,8 +433,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614190312777962221}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.22, z: 0.59}
   m_Center: {x: -0.04, y: 0.01, z: 0.39}
@@ -449,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63caaa7b8a7e2d247a156039aa3a03d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameController: {fileID: 0}
 --- !u!1001 &2743960519693756821
 PrefabInstance:
   m_ObjectHideFlags: 0

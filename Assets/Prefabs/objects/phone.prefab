@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4557102537596890888}
   - component: {fileID: 7113488620438618817}
   - component: {fileID: 5787801996331406445}
-  - component: {fileID: 449209253506179683}
   - component: {fileID: 7072614480459062128}
   - component: {fileID: 1450760716263019826}
   - component: {fileID: 1137971273684056074}
+  - component: {fileID: 129648809623518509}
   m_Layer: 6
   m_Name: phone
   m_TagString: Barras
@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3479766339061554268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.7369, y: 1.8947932, z: -50.638294}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 35.737, y: 1.8948, z: -50.751}
+  m_LocalScale: {x: 5.7614694, y: 5.7614694, z: 5.7614694}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,20 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &449209253506179683
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479766339061554268}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3231267988860439440, guid: d03151315c95e6f4fbcf18516d0c22bb, type: 3}
 --- !u!54 &7072614480459062128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -249,3 +235,16 @@ MonoBehaviour:
   wheight: 0
   boxSize: 
   isEspecial: 0
+--- !u!65 &129648809623518509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479766339061554268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07408142, y: 0.07520082, z: 0.08031494}
+  m_Center: {x: 0.000025455956, y: 0.0011942325, z: 0.022235697}

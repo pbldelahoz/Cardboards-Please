@@ -10,14 +10,25 @@ public class ObjectData : MonoBehaviour
     [SerializeField] private float wheight;
     [SerializeField] private string boxSize;
     [SerializeField] private bool isEspecial;
-    
-    public
-        void Start()
+    private bool scanned = false;
+
+    public void Start()
     {
+        scanned = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void setScanned()
+    {
+        scanned = true;
+    }
+
+    public bool getScanned()
+    {
+        return scanned;
     }
 }
