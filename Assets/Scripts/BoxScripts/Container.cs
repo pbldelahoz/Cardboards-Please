@@ -13,9 +13,8 @@ public class Container : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("UN OBJETO HA salido");
 
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 6 && boxController.SidesClosed==4)
         {
             Debug.Log("UN OBJETO HA ENTRADO");
             boxController.ObjectInside = true;
